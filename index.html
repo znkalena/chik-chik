@@ -5,36 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chik-chik barbershop</title>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/navigstion.css">
+    <link rel="stylesheet" href="css/main-btn.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/price.css">
 </head>
 <body>
   <header class="header">
-<div class="conteiner">
+<div class="conteiner ">
+ <div class="header__conteiner">
     <img class="header__logo" src="img/svg/logo.svg" alt="логотип Барбетшоп chik-chik">
     <nav class="header__navigator navigation">
     <ul class="navigation__list">
         <li class="navigation__item">
-            <a href="#price" class="header__link">стоимость услуг</a>
+            <a href="#price" class="navigation__link">стоимость услуг</a>
         </li>
         <li class="navigation__item">
-            <a href="#about" class="header__link">О нас</a>
+            <a href="#about" class="navigation__link">О нас</a>
         </li>
     </ul>
     </nav>
-    <a class="header__btn main-btn" href="#reserve">Записаться</a>    
+    <a class="header__btn main-btn" href="#reserve">Записаться</a> 
+  </div>   
 </div>
-  </header>
+  </header> 
   <main>    
 <section class="hero">
     <div class="conteiner">
         <h1 class="visually-hidden">барбершоп chik-chik</h1>
-        <h2 class="hero__title">Мы создаём искусство,& которое не стыдно показать</h2>
+        <h2 class="hero__title">Мы создаём искусство,<br>которое не стыдно показать</h2>
         <div class="hero__slider slider">
         <div class="slider__conteiner">
             <ul class="slider__list">
              <li class="slider__item">
                 <img src="img/foto 01.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>   
-             <li class="slider__item">
+             <li class="slider__item slider__item_active">
                 <img src="img/foto 02.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>   
             <li class="slider__item">
@@ -70,37 +82,37 @@
 <div class="price__wrapper_content">
     <div class="price__content">
         <ul class="content__list">
-         <li class="price__item">
+         <li class="content__item">
             <span></span>
             <span></span>
          </li>
-         <li class="price__item">
-            <span>стрижка ножницами</span>
-            <span>2500 руб</span>
+         <li class="content__item">
+            <span class="item__title">стрижка ножницами</span>
+            <span class="item__count">2500 руб</span>
          </li> 
-         <li class="price__item">
-            <span>стрижка машинкой</span>
-            <span>2000 руб</span>
+         <li class="content__item">
+            <span class="item__title">стрижка машинкой</span>
+            <span class="item__count">2000 руб</span>
          </li> 
-         <li class="price__item">
-            <span>стрижка + стрижка бороды</span>
-            <span>3000 руб</span>
+         <li class="content__item">
+            <span class="item__title">стрижка + стрижка бороды</span>
+            <span class="item__count">3000 руб</span>
          </li> 
-         <li class="price__item">
-            <span>моделирование</span>
-            <span></span>
+         <li class="content__item">
+            <span class="item__title">моделирование</span>
+            <span class="item__count">1500 руб</span>
          </li> 
-         <li class="price__item">
-            <span>Бритье головы</span>
-            <span>1500 руб</span>
+         <li class="content__item">
+            <span class="item__title">Бритье головы</span>
+            <span class="item__count">1500 руб</span>
          </li> 
-         <li class="price__item">
-            <span>укладка</span>
-            <span>1500 руб</span>
+         <li class="content__item">
+            <span class="item__title">укладка</span>
+            <span class="item__count">1500 руб</span>
          </li>  
-         <li class="price__item">
-            <span>Оформление бровей</span>
-            <span>1000 руб</span>
+         <li class="content__item">
+            <span class="item__title">Оформление бровей</span>
+            <span class="item__count" >1000 руб</span>
          </li>  
         </ul>
         <a class="price__link main-btn" href="#reserve">Записаться</a> 
@@ -263,7 +275,7 @@
               </label>
             </fieldset>
   </div>
-  <button class="reserve__btn">Записаться</button>
+  <button class="reserve__btn main-btn">Записаться</button>
 </forma>
 </div>
 </section>
@@ -271,7 +283,7 @@
   <footer class="footer">
 <div class="conteiner">
     <img class="footer__logo" src="img/svg/logo.svg" alt="логотип Барбетшоп chik-chik">
-    <nav class="footer__navigator navigation">
+    <div class="footer__navigator navigation">
     <ul class="navigation__list">
         <li class="navigation__item">
             <a href="#price" class="header__link">стоимость услуг</a>
@@ -280,10 +292,10 @@
             <a href="#about" class="header__link">О нас</a>
         </li>
     </ul>
-    </nav>
+  </div>
 <p class="footer__coperate">
-    <span>Designer: Alena Zin</span>
-    <span>Developer: </span>
+    <span>Designer: Alena </span>
+    <span>Developer:Alena </span>
 </p>
 <p class="footer__logodate">© chik chik, 2023</p>
 </div>

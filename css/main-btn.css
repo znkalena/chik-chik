@@ -1,0 +1,36 @@
+.main-btn{
+    color: #241D1C;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 185px;
+    height: 40px;
+    background-color: #F6F3E3;
+    border-radius: 4px;
+    padding: 13px 47px 13px 46px;
+    cursor: pointer;
+    }
+    .main-btn:hover:not(:disabled){
+        background: #EFE7BE;    
+    }
+    .main-btn:focus-visible{
+        background:#F6F3E3 ;
+        outline: 1px solid #FFFFFF;;
+    }
+    .main-btn:disabled{
+        background: #F6F3E3;
+        opacity: 0.4;
+    }
+    @media (max-width:540px) {       
+      .main-btn{    
+        padding: 10px 24px;    
+        font-size: 12px;
+        text-align: center;
+        line-height: 12px;
+        width: 128px;
+        height: 32px;      
+     }  
+    }

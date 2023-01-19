@@ -1,0 +1,19 @@
+.header__conteiner{
+    padding-top: 16px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #BFBDB2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+.header__navigator{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    margin-right: 54px;
+}
+@media(max-width:768px){
+    .header__navigator{
+        display: none;
+    }
+}
