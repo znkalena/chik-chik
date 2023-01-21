@@ -12,7 +12,7 @@
     justify-content: end;
     margin-right: 54px;
 }
-@media(max-width:768px){
+@media(max-width:769px){
     .header__navigator{
         display: none;
     }

@@ -2,8 +2,6 @@
     overflow: hidden;
     position: relative;
 }
-.slider__conteiner {
-}
 .slider__list {
     display: flex;
     list-style: none;

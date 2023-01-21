@@ -1,0 +1,115 @@
+.reserve{
+    padding: 62px 0 124px;
+}
+.reserve__title {
+    font-weight: 400;
+    font-size: 40px;       
+    text-transform: uppercase;
+    margin-bottom: 24px; 
+}
+.reserve__list {
+    padding-left: 24px;
+    margin: 0 0 72px;
+    line-height: 150%;
+}
+.reserve__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.forma__reserve_conteiner {
+    margin-bottom: 40px;
+}
+.reserve__fieldset {
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 0 72px;
+    gap: 8px;
+    flex-basis: 100%;
+}
+.reserve__fieldset:last-child{
+    margin-bottom: 0;
+}
+.reserve__fieldset legend{
+    flex-basis: 100%;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+.reserve__fieldset_sub {
+    flex-basis: 100%;
+    margin-bottom: 24px;
+}
+.reserve__fieldset_sub:last-child{
+    margin-bottom: 0;
+}
+
+@media (max-width:769px){
+    .reserve{
+        padding: 40px 0 80px;
+    }
+    .reserve__title {        
+        font-size: 32px;         
+            }
+    .reserve__list {
+        padding-left: 24px;
+        margin: 0 0 40px;        
+    }    
+    .forma__reserve_conteiner {
+        margin-bottom: 32px;
+    }
+    .reserve__fieldset {        
+        margin:0 0 40px;
+        gap: 8px;        
+    }    
+    .reserve__fieldset legend{        
+        margin-bottom: 16px;        
+        font-size: 16px;        
+    }
+    .reserve__fieldset_sub {        
+        margin-bottom: 20px;
+    }    
+}
+@media (max-width:520px){
+    .reserve{
+        padding: 32px 0 64px;
+    }
+    .reserve__title {        
+        font-size: 20px;       
+        margin-bottom: 16px; 
+        text-align: center;
+    }
+    .reserve__list {        
+        margin: 0 0 32px;
+        line-height: 120%;
+        font-size: 12px;
+    }
+    .reserve__item:not(:last-child) {
+        margin-bottom: 6px;
+    }
+    
+    .forma__reserve_conteiner {
+        margin-bottom: 24px;
+    }
+    .reserve__fieldset {       
+        margin:0 0 32px;
+        gap: 4px;
+        flex-basis: 100%;
+    }
+    .reserve__fieldset:last-child{
+        margin-bottom: 0;
+    }
+    .reserve__fieldset legend{        
+        margin-bottom: 16px;        
+        font-size: 16px;        
+    }
+    .reserve__fieldset_sub {       
+        margin-bottom: 20px;
+    }
+    .reserve__fieldset_sub:last-child{
+        margin-bottom: 0;
+    } 
+}
