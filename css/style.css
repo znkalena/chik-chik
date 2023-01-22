@@ -4,8 +4,8 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('fonts/raleway-v28-latin_cyrillic-regular.woff2') format('woff2'), 
-         url('fonts/raleway-v28-latin_cyrillic-regular.woff') format('woff'); 
+         url(../fonts/raleway-v28-latin_cyrillic-regular.woff2) format('woff2'), 
+         url(../fonts/raleway-v28-latin_cyrillic-regular.woff) format('woff'); 
   }
 html{
     box-sizing: border-box;    

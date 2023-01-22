@@ -25,7 +25,7 @@
     flex-basis: 50%;
     background-position: center;
     background-size: cover;    
-    background-image: url(.././img/priceimg.jpg);
+    background-image: url(../img/priceimg.jpg);
 }
 .price__content {
     flex-basis: 50%;
