@@ -12,7 +12,7 @@
     border: 11px double #F6F3E3;
     border-radius: 50%;
     border-left-style:solid ;
-    animation: rotate 0.5s infinite linear;
+    animation: rotate 0.5s infinite linear;        
 }
 @keyframes rotate {
     to{

@@ -85,36 +85,32 @@
 <p class="price__paragraph">...бесценна, но всё же</p>
 <div class="price__wrapper_content">
     <div class="price__content">
-        <ul class="content__list">
-         <li class="content__item">
-            <span></span>
-            <span></span>
-         </li>
-         <li class="content__item">
+        <ul class="price__list">         
+         <li class="price__item">
             <span class="item__title">стрижка ножницами</span>
             <span class="item__count">2500 руб</span>
          </li> 
-         <li class="content__item">
+         <li class="price__item">
             <span class="item__title">стрижка машинкой</span>
             <span class="item__count">2000 руб</span>
          </li> 
-         <li class="content__item">
+         <li class="price__item">
             <span class="item__title">стрижка + стрижка бороды</span>
             <span class="item__count">3000 руб</span>
          </li> 
-         <li class="content__item">
+         <li class="price__item">
             <span class="item__title">моделирование</span>
             <span class="item__count">1500 руб</span>
          </li> 
-         <li class="content__item">
+         <li class="price__item">
             <span class="item__title">Бритье головы</span>
             <span class="item__count">1500 руб</span>
          </li> 
-         <li class="content__item">
+         <li class="price__item">
             <span class="item__title">укладка</span>
             <span class="item__count">1500 руб</span>
          </li>  
-         <li class="content__item">
+         <li class="price__item">
             <span class="item__title">Оформление бровей</span>
             <span class="item__count" >1000 руб</span>
          </li>  
@@ -154,9 +150,9 @@
     <li class="reserve__item">Выберите специалиста</li>
     <li class="reserve__item">Выберите удобный день и время</li>
 </ol>
-<forma class="reserve__forma">
+<forma class="reserve__form">
   <div class="forma__reserve_conteiner">
-    <fieldset class="reserve__fieldset">
+    <fieldset class="reserve__fieldset reserve__fieldset_service">
         <legend>Услуга</legend>
         <label class="radio">
             <input type="radio" class="radio__input" name="service">
@@ -188,33 +184,33 @@
         </label>
     </fieldset>
 
-    <fieldset class="reserve__fieldset">
+    <fieldset class="reserve__fieldset" name="fieldspec">
         <legend>Специалист</legend>
         <label class="radio">
-            <input type="radio" class="radio__input" name="specialist">
+            <input type="radio" class="radio__input" name="spec">
             <span class="radio__label radio__label_spec" style="--bg-image:url(../img/igor.png)">Игорь</span>
         </label>
         <label class="radio">
-            <input type="radio" class="radio__input" name="specialist">
+            <input type="radio" class="radio__input" name="spec">
             <span class="radio__label radio__label_spec" style="--bg-image:url(../img/anatol.png)">Анатолий</span>
         </label>
         <label class="radio">
-            <input type="radio" class="radio__input" name="specialist" checked>
+            <input type="radio" class="radio__input" name="spec" checked>
             <span class="radio__label radio__label_spec" style="--bg-image:url(../img/ruslan.png)">Руслан</span>
         </label>
         <label class="radio">
-            <input type="radio" class="radio__input" name="specialist">
+            <input type="radio" class="radio__input" name="spec">
             <span class="radio__label radio__label_spec" style="--bg-image:url(../img/michaik.png)">Михаил</span>
         </label>
         <label class="radio">
-            <input type="radio" class="radio__input" name="specialist">
+            <input type="radio" class="radio__input" name="spec">
             <span class="radio__label radio__label_spec" style="--bg-image:url(../img/evgen.png)">Евгений</span>
         </label>        
     </fieldset>
 
     <fieldset class="reserve__fieldset">
         <legend>Дата и время</legend>
-        <fieldset class="reserve__fieldset reserve__fieldset_sub">
+        <fieldset class="reserve__fieldset reserve__fieldset_sub" name="fieldmonth">
          <label class="radio">
            <input type="radio" class="radio__input" name="month" checked>
            <span class="radio__label ">Январь</span>
@@ -229,26 +225,26 @@
           </label>
         </fieldset> 
 
-        <fieldset class="reserve__fieldset reserve__fieldset_sub">
+        <fieldset class="reserve__fieldset reserve__fieldset_sub" name="fieldday">
             <label class="radio">
-                <input type="radio" class="radio__input" name="data" checked>
+                <input type="radio" class="radio__input" name="day" checked>
                 <span class="radio__label ">18 января</span>
               </label>
               <label class="radio">
-                <input type="radio" class="radio__input" name="data" >
+                <input type="radio" class="radio__input" name="day" >
                 <span class="radio__label ">19 января</span>
               </label>
               <label class="radio">
-                <input type="radio" class="radio__input" name="data" >
+                <input type="radio" class="radio__input" name="day" >
                 <span class="radio__label ">20 января</span>
               </label>
               <label class="radio">
-                <input type="radio" class="radio__input" name="data" >
+                <input type="radio" class="radio__input" name="day" >
                 <span class="radio__label ">21 января</span>
               </label>   
         </fieldset>
 
-        <fieldset class="reserve__fieldset reserve__fieldset_sub">
+        <fieldset class="reserve__fieldset reserve__fieldset_sub" name="fieldtime">
             <label class="radio">
                 <input type="radio" class="radio__input" name="time" checked>
                 <span class="radio__label ">10:00-11:30</span>
@@ -279,7 +275,7 @@
               </label>
             </fieldset>
   </div>
-  <button class="reserve__btn main-btn">Записаться</button>
+  <button class="reserve__btn main-btn" id="btn" >Записаться</button>
 </forma>
 </div>
 </section>
