@@ -37,10 +37,22 @@
     opacity: 0.3; 
 }
 .radio__label_spec {
-    padding-left:52px;
-    background-image: var(--bg-image);
-    background-size: 36px;
-    background-position: 8px;
+    position: relative;
+    padding-left:52px;    
+}
+.radio__label_spec::before{
+    position: absolute;
+    content: '';
+    background-image: var(--bg-image);     
+    background-size: cover;
+    left:8px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    display: block;
+    border-radius: 50%;
+
     background-repeat: no-repeat;
 }
 @media (max-width:769px){
@@ -58,6 +70,10 @@
     }
     .radio__label_spec { 
         padding-left:37px ;              
-        background-size: 24px;        
+              
+    }
+    .radio__label_spec::before{
+        width: 24px;
+        height: 24px;
     }  
 }
