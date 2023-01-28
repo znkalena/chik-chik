@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chik-chik barbershop</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -26,7 +27,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/reserve.css">
     <link rel="stylesheet" href="css/radio.css">    
-    <script src="./js/index.js" type="module" defer></script>
+    
 </head>
 <body>
   <header class="header">
@@ -56,28 +57,28 @@
         <div class="slider__conteiner">
             <ul class="slider__list">
              <li class="slider__item">
-                <img src="img/foto 01.jpg" alt="фото мужской стрижки" class="slider__img">
+                <img src="img/foto01.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>   
              <li class="slider__item slider__item_active">
-                <img src="img/foto 02.jpg" alt="фото мужской стрижки" class="slider__img">
+                <img src="img/foto02.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>   
             <li class="slider__item">
-            <img src="img/foto 03.jpg" alt="фото мужской стрижки" class="slider__img">
+            <img src="img/foto03.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>
              <li class="slider__item">
-             <img src="img/foto 04.jpg" alt="фото мужской стрижки" class="slider__img">
+             <img src="img/foto04.jpg" alt="фото мужской стрижки" class="slider__img">
             </li> 
              <li class="slider__item">
-             <img src="img/foto 05.jpg" alt="фото мужской стрижки" class="slider__img">
+             <img src="img/foto05.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>
              <li class="slider__item">
-             <img src="img/foto 06.jpg" alt="фото мужской стрижки" class="slider__img">
+             <img src="img/foto06.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>
              <li class="slider__item">
-             <img src="img/foto 07.jpg" alt="фото мужской стрижки" class="slider__img">
+             <img src="img/foto07.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>
              <li class="slider__item">
-             <img src="img/foto 08.jpg" alt="фото мужской стрижки" class="slider__img">
+             <img src="img/foto08.jpg" alt="фото мужской стрижки" class="slider__img">
             </li>
             </ul>
             <button class="slider__arrow slider__arrow_left" aria-label="предыдущий слайд"></button>
@@ -140,7 +141,7 @@
       </li>
       <li class="about__item about__item_master">
         <h3 class="about__item_title">мастера бород и усов</h3> 
-        <p class="about__item_description">Мы заботливо уложим вашу бороду и усы</p> 
+        <p class="about__item_description">Мы заботливо уложим вашу бороду и&nvspусы</p> 
       </li> 
       <li class="about__item about__item_garant">
         <h3 class="about__item_title">гарантия качества</h3> 
@@ -158,10 +159,11 @@
     <li class="reserve__item">Выберите специалиста</li>
     <li class="reserve__item">Выберите удобный день и время</li>
 </ol>
-<forma class="reserve__form">
+<form class="reserve__form">
   <div class="forma__reserve_conteiner">
     <fieldset class="reserve__fieldset reserve__fieldset_service" name="fieldservice">
         <legend>Услуга</legend>
+
         <label class="radio">
             <input type="radio" class="radio__input" name="service">
             <span class="radio__label">стрижка ножницами</span>
@@ -192,7 +194,7 @@
         </label>
     </fieldset>
 
-    <fieldset class="reserve__fieldset"name="fieldspec" >
+    <fieldset class="reserve__fieldset" name="fieldspec" >
         <legend>Специалист</legend>
         <label class="radio " >
             <input type="radio" class="radio__input" name="spec">
@@ -232,7 +234,7 @@
             <span class="radio__label ">Март</span>
           </label>
         </fieldset> 
-
+    </fieldset>
         <fieldset class="reserve__fieldset reserve__fieldset_sub" name="fieldday">
             <label class="radio fieldday">
                 <input type="radio" class="radio__input" name="day" checked>
@@ -283,8 +285,8 @@
               </label>
             </fieldset>
   </div>
-  <button class="reserve__btn main-btn" id="btn" >Записаться</button>
-  <forma>
+  <button class="reserve__btn main-btn" id="btn">Записаться</button>
+  </form>
 </div>
 </section>
   </main>
@@ -308,6 +310,6 @@
 <p class="footer__logodate">© chik chik, 2023</p>
 </div>
   </footer>
-  
+  <script src="./js/index.js" type="module"></script>  
 </body>
 </html>

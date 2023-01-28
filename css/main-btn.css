@@ -12,6 +12,7 @@
     border-radius: 4px;
     padding: 13px 47px 13px 46px;
     cursor: pointer;
+    border: none;
     }
     .main-btn:hover:not(:disabled){
         background: #EFE7BE;    

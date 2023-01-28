@@ -20,16 +20,16 @@
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns:384px 384px 384px;
-    gap: 24px 32px;
+    grid-template-columns:repeat(auto-fit,minmax(384px,1fr));
+    gap: 24px 24px;    
 
 }
 .about__item{
-    padding: 6px 6px 6px 96px;
+    padding: 6px 0 6px 96px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: 80px;
-    
+    min-height: 80px;
 }
 .about__item_top{
     background-image: url(.././img/svg/icon1.svg);    
@@ -60,15 +60,15 @@ background-image: url(.././img/svg/icon3.svg);
         margin-bottom: 46px;
     }
     .about__list{
-        grid-template-columns: 290px 290px 290px;
-        gap: 29px;
+        grid-template-columns: repeat(auto-fit,290px);        
     }
     .about__item{
-        padding: 96px 0 0 0;
-        background-position: top;             
+        padding-top: 96px;
+        background-position: top left; 
+        padding-left: 0;            
     }
 }
-@media(max-width:769px){
+@media(max-width:768px){
     .about{
         padding:40px 0;
     }

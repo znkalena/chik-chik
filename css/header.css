@@ -12,8 +12,13 @@
     justify-content: end;
     margin-right: 54px;
 }
-@media(max-width:769px){
+@media(max-width:768px){
     .header__navigator{
         display: none;
+    }
+}
+@media(max-width:560px){
+    .header__conteiner{
+        padding: 12px 0 13px 0;
     }
 }
