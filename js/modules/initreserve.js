@@ -1,6 +1,6 @@
 import { API_URL } from "./const.js";
-/*import { removePreload } from "./util.js";
-import { addPreload } from "./util.js";*/
+import { removePreload } from "./util.js";
+import { addPreload } from "./util.js";
 
 
 const addDisabled=(arr)=>{
@@ -29,7 +29,7 @@ const addDisabled=(arr)=>{
          const labels=data.map((element)=>{
            const label=document.createElement('label');
            label.classList.add('radio');
-           label.innerHTML=`<input type="radio" class="radio__input" name="month" value="${element.id}">
+           label.innerHTML=`<input type="radio" class="radio__input" name="month" value="${element}">
            <span class="radio__label">${new Intl.DateTimeFormat('ru-RU',{month:'long'})
            .format(new Date(element))}</span>`;
            return label;
@@ -38,23 +38,23 @@ const addDisabled=(arr)=>{
          };
          
          const renderDay=(wrapper,data,month)=>{
-             const labels=data.map((element)=>{
+             const labels=data.map((day)=>{
                const label=document.createElement('label');
                label.classList.add('radio');
-               label.innerHTML=`<input type="radio" class="radio__input" name="day" value="${element}">
+               label.innerHTML=`<input type="radio" class="radio__input" name="day" value="${day}">
                <span class="radio__label">${new Intl.DateTimeFormat('ru-RU',{month:'long',day:'numeric'})
-               .format(new Date(`${month}/${element}`))}</span>`;
+               .format(new Date(`${month}/${day}`))}</span>`;
                return label;
              })
              wrapper.append(...labels);
              };
  
              const renderTime=(wrapper,data)=>{
-                 const labels=data.map((element)=>{
+                 const labels=data.map((time)=>{
                    const label=document.createElement('label');
                    label.classList.add('radio');
-                   label.innerHTML=`<input type="radio" class="radio__input" name="time" value="${element}">
-                   <span class="radio__label">${element}</span>`;
+                   label.innerHTML=`<input type="radio" class="radio__input" name="time" value="${time}">
+                   <span class="radio__label">${time}</span>`;
                    return label;
                  })
                  wrapper.append(...labels);
@@ -62,74 +62,72 @@ const addDisabled=(arr)=>{
 
    export const initReserve=()=>{
     const reserveForm =document.querySelector('.reserve__form');
-    const btn=reserveForm.querySelector('#btn');
-      
-    const{fieldspec,fieldmonth,fieldday,fieldtime}=reserveForm;  
-    console.log(fieldspec);
+    
+    const {fieldspec,fieldmonth,fieldday,fieldtime,btn} =reserveForm;  
+    addDisabled([fieldspec,fieldday,fieldmonth,fieldtime,btn]);
 
     reserveForm.addEventListener('change',async event =>{
-      /* addPreload(fieldspec);*/
+       addPreload(fieldspec);
    
       const target =event.target;      
-   
+      
       if(target.name==='service'){
-       addDisabled(fieldmonth,fieldday,fieldtime,btn,);
+        addDisabled([fieldspec,fieldday,fieldmonth,fieldtime,btn]);
               
        fieldspec.innerHTML= '<legend>Специалист</legend>';
-      /* addPreload(fieldspec);*/
+       addPreload(fieldspec);
    
        const responce = await fetch(`${API_URL}/api?service=${target.value}`);    
        const data= await responce.json();    
-      console.log(data);
+      
        renderSpec(fieldspec,data);
-       /*removePreload(fieldspec);*/
+       removePreload(fieldspec);
    
-       removeDisabled(fieldspec);
+       removeDisabled([fieldspec]);
       }
       if(target.name==='spec'){
-       addDisabled(fieldspec,fieldday,fieldtime,btn);
-       
-       /*addPreload(fieldMonth);*/
+       addDisabled([fieldmonth,fieldday,fieldtime,btn]);
+      
+       addPreload(fieldmonth);
    
        const responce = await fetch(`${API_URL}/api?spec=${target.value}`);            
        const data= await responce.json();
           
        fieldmonth.textContent='';
        renderMonth(fieldmonth,data);
-      /* removePreload(fieldMonth);*/
+       removePreload(fieldmonth,fieldspec);
    
-       removeDisabled(fieldday,fieldmonth);
+       removeDisabled([fieldmonth,fieldday]);
       }
       if(target.name==='month'){
-       addDisabled(fieldtime,btn,);
+       addDisabled([fieldday,fieldtime,btn]);
        
-       /*addPreload(fieldDay);*/
+       addPreload(fieldday);
    
-       const responce = await fetch(`${API_URL}/
-       api?specialist=${reserveForm.spec.value}&month=${target.name}`);    
-       const data =await responce.json();    
+       const responce = await fetch(`${API_URL}/api?spec=${reserveForm.spec.value}&month=${target.value}`);    
+       const data =await responce.json(); 
+         
        fieldday.textContent='';
-       renderDay(fieldday,data,target.name);
-       /*removePreload(fieldDay);*/
+       renderDay(fieldday,data,target.value);
+       removePreload(fieldday);
    
-       removeDisabled(fieldday,fieldmonth,fieldtime);
+       removeDisabled([fieldday]);
       }
       if(target.name==='day'){
-       addDisabled([btn,]);
-       
-       /*addPreload(fieldTime);*/
+       addDisabled([btn]);
+       console.log(target);
+       addPreload(fieldtime);
    
-       const responce = await fetch(`${API_URL}/
-       api?spec=${reserveForm.spec.value}&month=${target.month}&day=${target.value}`);    
+       const responce = await fetch(`${API_URL}/api?spec=${reserveForm.spec.value}&month=${reserveForm.month.value}&day=${target.value}`);    
        const data=await responce.json(); 
        
        fieldtime.textContent='';
        renderTime(fieldtime,data);
-       /*removePreload(fieldTime);*/
-       removeDisabled(btn);    
+       removePreload(fieldtime);
+       removeDisabled([fieldtime]);    
       }
       if(target.name==='time'){    
-       removeDisabled(btn);    
+       removeDisabled([btn]);    
       }
       
     });
